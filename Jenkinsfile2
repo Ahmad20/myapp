@@ -25,7 +25,8 @@ pipeline {
     stage('Build Docker Image'){
       agent { label 'docker' }
       steps{
-        sh 'docker build -t ahmadtrg/myapp:1.0.0 .'
+       // sh 'docker build -t ahmadtrg/myapp:1.0.0 .'
+        sh 'docker --version"
       }
     }
     /**stage('Push Docker Image'){
