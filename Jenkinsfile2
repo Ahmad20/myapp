@@ -28,8 +28,7 @@ pipeline {
         sh 'docker --version'
       }
     }*/
-    stages {
-        stage('Build') {
+    stage('Build') {
           agent {
                 docker {
                     image 'gradle:6.7-jdk11'
@@ -37,8 +36,7 @@ pipeline {
                     reuseNode true
                 }
             }
-        }
-      }
+     }
     /**stage('Push Docker Image'){
       steps{
         withCredentials([string(credentialsId: 'pass_dockerhub', variable: 'dockerpass')]) {
