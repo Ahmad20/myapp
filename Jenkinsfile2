@@ -2,7 +2,7 @@ pipeline {
   agent any
   agent{
     docker{
-      Image "docker:dind"
+      image "docker:dind"
       Privileged true
     }
   }
