@@ -23,10 +23,12 @@ pipeline {
       }
     }*/
     stage('Build Docker Image'){
+      steps{
       agent {
         dockerfile {
           args '--version'
         }
+      }
       }
      /** agent { label 'docker' }
       steps{
