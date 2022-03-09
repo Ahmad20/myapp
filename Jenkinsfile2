@@ -3,7 +3,7 @@ pipeline {
   agent{
     docker{
       image "docker:dind"
-      Privileged true
+      privileged true
     }
   }
   tools {nodejs "node"}
