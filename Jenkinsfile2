@@ -11,7 +11,7 @@ pipeline {
       }
     }
         
-    stage('Install dependencies') {
+    /**stage('Install dependencies') {
       steps {
         sh 'npm install'
       }
@@ -21,7 +21,7 @@ pipeline {
         sh "chmod +x test.sh"
         sh 'npm test'
       }
-    }
+    }*/
     stage('Build Docker Image'){
       agent any
       steps{
