@@ -24,8 +24,9 @@ pipeline {
     }*/
     stage('Build Docker Image'){
       agent {
-      dockerfile {
+        dockerfile {
           args '--version'
+        }
       }
      /** agent { label 'docker' }
       steps{
