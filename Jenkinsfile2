@@ -23,7 +23,7 @@ pipeline {
       }
     }*/
     stage('Build Docker Image'){
-      agent {docker}
+      agent { label 'docker' }
       steps{
         sh 'docker build -t ahmadtrg/myapp:1.0.0 .'
       }
